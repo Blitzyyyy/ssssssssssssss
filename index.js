@@ -8,9 +8,6 @@ const bot = mineflayer.createBot({
     //auth: "mojang"
 });
 
-bot.on('chat', (username, message) => {
-    if (username === bot.username) return
-    bot.chat(message)
 });
 
 bot.on('kicked', console.log)
