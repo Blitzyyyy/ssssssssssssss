@@ -8,7 +8,6 @@ const bot = mineflayer.createBot({
     //auth: "mojang"
 });
 
-});
 
 bot.on('kicked', console.log)
 bot.on('error', console.log)
