@@ -4,13 +4,20 @@ const bot = mineflayer.createBot({
     host: 'ult9.falix.gg',
     port: 39938,
     version: "1.17.1",
-    username: 'Jamie',
+    username: 'Bewohner',
     //auth: "mojang"
 });
 
+bot.on('chat', (username, message) => {
+    if (username === bot.username) return
+    bot.chat(message)
+});
 
 bot.on('kicked', console.log)
 bot.on('error', console.log)
+
+
+bot.setControlState("jump", true);
 
 bot.on("move", ()=>{
     let friend = bot.nearestEntity();
